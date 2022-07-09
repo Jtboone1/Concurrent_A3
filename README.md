@@ -1,4 +1,12 @@
-# Sample Output
+## Can you reuse your synchronization mechanism? Why or why not?
+
+I used a Cyclic Barrier for my solution, which resets it's count once the the count reaches zero. Therefor I can reuse
+my mechanism. I would just need to call the reset method on the Cyclic barrier instead of creating a new one
+for each layer.
+
+If I were to use a countdown latch, the countdown would never reset, therefor I could not reuse my mechanism if it were part of my solution.
+
+## Sample Output
 
 The program displays the following output when fed the given input / weight files:
 
@@ -48,11 +56,3 @@ Final Layer Outputs: -22608.6806323157 17567.679839645698 4396.633344686233
 Largest index: 1
 Largest output: 17567.679839645698
 ```
-
-# Can you reuse your synchronization mechanism? Why or why not?
-
-I used a Cyclic Barrier for my solution, which resets it's count once the the count reaches zero. Therefor I can reuse
-my mechanism. I would just need to call the reset method on the Cyclic barrier instead of creating a new one
-for each layer.
-
-If I were to use a countdown latch, the countdown would never reset, therefor I could not reuse my mechanism if it were part of my solution.
