@@ -1,8 +1,7 @@
 ## Can you reuse your synchronization mechanism? Why or why not?
 
 I used a Cyclic Barrier for my solution, which resets it's count once the the count reaches zero. Therefor I can reuse
-my mechanism. I would just need to call the reset method on the Cyclic barrier instead of creating a new one
-for each layer.
+my mechanism as once it has completed it's countdown, it will reset to the initial state. That is the reason it is called a Cyclic Barrier. 
 
 If I were to use a countdown latch, the countdown would never reset, therefor I could not reuse my mechanism if it were part of my solution.
 
