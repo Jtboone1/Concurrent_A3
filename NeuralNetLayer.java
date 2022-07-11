@@ -34,7 +34,7 @@ public class NeuralNetLayer extends Thread
 		{
 			try 
 			{
-				// The last hidden layer outputs to 3 neurons, where every other layer outputs to 5. 
+				// The last hidden layer outputs to 3 neurons, whereas every other layer outputs to 5. 
 				int output_neurons = layer_id == NeuralNetwork.max_layer ? 3 : 5;
 
 				// Computes the row in the matrix that correspond to the proper neurons outputs.
